@@ -9,4 +9,4 @@ const burger = {
   },
 };
 
-burger.allBurgers();
+module.exports = burger;
