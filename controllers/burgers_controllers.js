@@ -11,4 +11,9 @@ router.get("/", function (req, res) {
   });
 });
 
+router.post("/api/:burger", function (req, res) {
+  console.log(req.params);
+  res.end();
+});
+
 module.exports = router;
