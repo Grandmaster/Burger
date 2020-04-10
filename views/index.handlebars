@@ -1,6 +1,7 @@
-<img src='../public/assets/img/burger.png' />
-
 <div class='container'>
+    <div class='row'>
+        <img src='/assets/img/149342.png' />
+    </div>
     <div class='row'>
         <div class='col-sm-6' id='made-burgers'>
             <ul id='burger-list'>
@@ -19,7 +20,7 @@
                 {{#each list}}
                 {{#if devoured}}
                 <li>{{id}}. {{burger_name}}
-                    <p>Devoured!</p>
+                    <p>(Devoured!)</p>
                 </li>
                 {{/if}}
                 {{/each}}
