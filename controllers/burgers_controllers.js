@@ -5,7 +5,10 @@ const burger = require("../models/burger.js");
 const router = express.Router();
 
 router.get("/", function (req, res) {
-  res.render("index");
+  burger.allBurgers(function (data) {
+    var burg = { list: data };
+    res.render("index", burg);
+  });
 });
 
 module.exports = router;
