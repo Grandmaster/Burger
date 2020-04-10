@@ -5,13 +5,25 @@
         <div class='col-sm-6' id='made-burgers'>
             <ul>
                 {{#each list}}
+                {{#unless devoured}}
                 <li>{{id}}. {{burger_name}}
                     <button class='btn btn-warning'>Devour it!</button>
                 </li>
+                {{/unless}}
                 {{/each}}
             </ul>
         </div>
-        <div class='col-sm-6' id='eaten-burgers'>blabla</div>
+        <div class='col-sm-6' id='eaten-burgers'>
+            <ul>
+                {{#each list}}
+                {{#if devoured}}
+                <li>{{id}}. {{burger_name}}
+                    <button class='btn btn-warning'>Devour it!</button>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ul>
+        </div>
     </div>
     <div class='row'>
         <div class='col-sm-12 d-flex justify-content-center'>
