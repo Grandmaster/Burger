@@ -7,7 +7,6 @@ $(document).ready(function () {
     event.preventDefault();
     var burgerName = $(this).children("textarea").val();
     $.post("/api/" + burgerName, burgerName, function () {
-      console.log("Make me that burger!");
       location.reload();
     });
   });
