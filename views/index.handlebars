@@ -3,10 +3,11 @@
 <div class='container'>
     <div class='row'>
         <div class='col-sm-6' id='made-burgers'>
-            <ul>
+            <ul id='burger-list'>
                 {{#each list}}
                 {{#unless devoured}}
-                <li>{{id}}. {{burger_name}}
+                <li>
+                    <p>{{id}}. {{burger_name}}</p>
                     <button class='btn btn-warning'>Devour it!</button>
                 </li>
                 {{/unless}}
@@ -18,7 +19,7 @@
                 {{#each list}}
                 {{#if devoured}}
                 <li>{{id}}. {{burger_name}}
-                    <button class='btn btn-warning'>Devour it!</button>
+                    <p>Devoured!</p>
                 </li>
                 {{/if}}
                 {{/each}}

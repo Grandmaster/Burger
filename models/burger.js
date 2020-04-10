@@ -12,6 +12,11 @@ const burger = {
       cb(result);
     });
   },
+  eatBurger: function (id, cb) {
+    orm.updateOne("burgers", "devoured", true, "id", id, function (result) {
+      cb(result);
+    });
+  },
 };
 
 module.exports = burger;

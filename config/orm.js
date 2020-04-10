@@ -15,6 +15,22 @@ const orm = {
       }
     );
   },
+  updateOne: function (
+    table,
+    setColumn,
+    setValue,
+    conditionColumn,
+    conditionValue,
+    cb
+  ) {
+    connection.query(
+      "update ?? set ?? = ? where ?? = ?",
+      [table, setColumn, setValue, conditionColumn, conditionValue],
+      function (_, result) {
+        cb(result);
+      }
+    );
+  },
 };
 
 module.exports = orm;

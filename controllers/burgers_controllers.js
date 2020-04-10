@@ -18,4 +18,11 @@ router.post("/api/:burger", function (req, res) {
   });
 });
 
+router.put("/api/:id", function (req, res) {
+  var id = req.params.id;
+  burger.eatBurger(id, function () {
+    res.status(200).end();
+  });
+});
+
 module.exports = router;
