@@ -12,8 +12,10 @@ router.get("/", function (req, res) {
 });
 
 router.post("/api/:burger", function (req, res) {
-  console.log(req.params);
-  res.end();
+  var name = req.params.burger;
+  burger.makeBurger(name, function () {
+    res.status(200).end();
+  });
 });
 
 module.exports = router;

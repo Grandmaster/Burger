@@ -6,6 +6,15 @@ const orm = {
       cb(result);
     });
   },
+  insertOne: function (table, column, value, cb) {
+    connection.query(
+      "insert into ??(??) values (?)",
+      [table, column, value],
+      function (_, result) {
+        cb(result);
+      }
+    );
+  },
 };
 
 module.exports = orm;
